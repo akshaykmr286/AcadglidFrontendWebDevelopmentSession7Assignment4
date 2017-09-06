@@ -1,7 +1,7 @@
 <div class="container">
   <div class="panel panel-default">
     <div class="panel-heading">
-      <h3 class="panel-title" class="bold brown">MouseEnter And MouseLeave on the indexes :</h3>
+      <h4 class="panel-title" class="bold brown">MouseEnter And MouseLeave on the indexes (using ngStyle) :</h4>
     </div>
     <div class="panel-body">
       <table class="table table-hover">
@@ -13,7 +13,7 @@
         </thead>
         <tbody>
           <tr *ngFor="let item of items; let i = index;">
-            <td (mouseenter)="MouseEnter(i)" (mouseleave)="MouseLeave(i)" [id]="i">{{i}}</td>
+            <td (mouseenter)="MouseEnter(i)" (mouseleave)="MouseLeave(i)" [ngStyle]="{'color': selectedindex == i ? color : black }" class="bold">{{i}}</td>
             <td>{{item}}</td>
           </tr>
         </tbody>
